@@ -1,6 +1,7 @@
 #bot.py 
 import os
 import discord
+from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='/home/chris/DiscordBot/.env')
@@ -23,4 +24,13 @@ async def on_ready():
         print(f'{client.user} is connected to {guild.name}(id: {guild.id})')
         members = '\n - '.join([member.name for member in guild.members])
         print(f'Guild Members:\n - {members}')
+
+@client.command()
+async def topG(ctx):
+        print('not finished yet')
+
+#@client.command()
+ 
+        
+
 client.run(TOKEN)
